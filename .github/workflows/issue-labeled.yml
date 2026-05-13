@@ -8,6 +8,10 @@ jobs:
   reply-labeled:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
       - name: missing demo
         if: github.event.label.name == 'missing demo'
         uses: actions-cool/issues-helper@v2.2.1
