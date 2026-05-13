@@ -8,6 +8,10 @@ jobs:
   close-issues:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
       - name: missing demo
         uses: actions-cool/issues-helper@v2.2.1
         with:
